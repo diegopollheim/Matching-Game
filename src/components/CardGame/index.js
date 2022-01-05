@@ -1,9 +1,9 @@
 import "./style.css"
 
-export default function CardGame () {
+export default function CardGame (icon = "alura-pixel", alt = "Logo da alura" ) {
     return /*html*/`
         <article class="card-game">
-            <img src="../images/alura-pixel.png">
+            <img src="../images/${icon}.png" alt="${alt}">
         </article>
     `;
 }
