@@ -1,0 +1,21 @@
+.card-front-back {
+  --width: 130px;
+  --height: 160px;
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  transition: all 500ms ease-in-out;
+}
+
+.card-front-back > .front,
+.card-front-back > .back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+/* Gira o cartao de trás ao cont´rario */
+.card-front-back > .back {
+    transform: rotateY(180deg);
+}
