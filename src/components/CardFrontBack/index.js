@@ -1,9 +1,18 @@
 import CardGame from "../CardGame";
 import "./style.css";
 
-export default function CardFrontBack() {
+function CardFrontBack() {
+  window.handleClick = (event) => {
+    const $origin = event.target;
+    const $cardPai = $origin.closest(".card-front-back");
+
+    $cardPai.classList.toggle('active');
+
+    console.log($cardPai);
+  };
+
   return /*html*/ `
-    <article class="card-front-back">
+    <article class="card-front-back" onClick="handleClick(event)">
         <div class="front">
             ${CardGame()}
         </div>
@@ -13,3 +22,5 @@ export default function CardFrontBack() {
     </article>
     `;
 }
+
+export default CardFrontBack;

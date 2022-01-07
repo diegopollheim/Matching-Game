@@ -5,8 +5,12 @@
   height: var(--height);
   position: relative;
   transform-style: preserve-3d;
-  perspective: 800px;
-  transition: all 500ms ease-in-out;
+  perspective: 280px;
+  transition: transform 400ms ease-in-out;
+}
+
+.card-front-back.active{
+  transform: rotateY(180deg);
 }
 
 .card-front-back > .front,
@@ -15,7 +19,12 @@
     backface-visibility: hidden;
 }
 
-/* Gira o cartao de trás ao cont´rario */
+/* Gira o cartao de trás ao contrário */
 .card-front-back > .back {
     transform: rotateY(180deg);
+}
+
+.card-front-back > .card-game > .card.back {
+  background-color: var(--color-fiery-rose);
+  background-color: #ff0000;
 }
