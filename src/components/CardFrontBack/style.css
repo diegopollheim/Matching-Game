@@ -22,9 +22,9 @@
 /* Gira o cartao de trás ao contrário */
 .card-front-back > .back {
     transform: rotateY(180deg);
+    background-color: var(--color-fiery-rose);
 }
 
-.card-front-back > .card-game > .card.back {
+.card-front-back > .back > .card-game {
   background-color: var(--color-fiery-rose);
-  background-color: #ff0000;
 }
