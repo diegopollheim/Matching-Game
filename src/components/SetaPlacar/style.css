@@ -1,0 +1,19 @@
+.seta {
+display: flex;
+width: 100%;
+margin: 0px;
+}
+
+.seta img {
+width: 20px;
+height: 15px;
+margin-left: 95px; /*PT1*/
+}
+
+.seta.player-one {
+    margin-left: 95px; /*PT1*/
+}
+
+.seta.player-two {
+    margin-left: 175px; /*PT1*/
+}

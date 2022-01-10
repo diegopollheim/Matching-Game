@@ -9,20 +9,20 @@
   transition: transform 400ms ease-in-out;
 }
 
-.card-front-back.active{
+.card-front-back.active {
   transform: rotateY(180deg);
 }
 
 .card-front-back > .front,
 .card-front-back > .back {
-    position: absolute;
-    backface-visibility: hidden;
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 /* Gira o cartao de trás ao contrário */
 .card-front-back > .back {
-    transform: rotateY(180deg);
-    background-color: var(--color-fiery-rose);
+  transform: rotateY(180deg);
+  background-color: var(--color-fiery-rose);
 }
 
 .card-front-back > .back > .card-game {

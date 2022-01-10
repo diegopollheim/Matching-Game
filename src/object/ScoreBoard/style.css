@@ -1,6 +1,11 @@
 .score-board {
     display: flex;
-    justify-content:space-evenly;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    column-gap: 6px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.vs {
+    color: var(--color-sandstrom);
 }

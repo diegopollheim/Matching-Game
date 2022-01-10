@@ -1,11 +1,19 @@
+import Placar from "../../components/Placar";
 import PlayerName from "../../components/PlayerName";
+import SetaPlacar from "../../components/SetaPlacar";
+
 import "./style.css";
+
 
 export default function ScoreBoard() {
   return /*html*/ `
+  ${SetaPlacar()}
     <header class="score-board">
-        ${PlayerName("Player 1")}
-        ${PlayerName("Player 2")}
+        ${PlayerName("Player1")}
+        ${Placar()}
+        <p class="vs">vs</p>
+        ${Placar()}
+        ${PlayerName("Player2")}
     </header>
     `;
 }

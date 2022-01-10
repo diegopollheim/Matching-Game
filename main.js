@@ -1,7 +1,7 @@
-import './src/styles/settings/colors.css';
-import './src/styles/elements/styles.css';
-import BoardGame from './src/object/BoardGame';
-import ScoreBoard from './src/object/ScoreBoard';
+import "./src/styles/settings/colors.css";
+import "./src/styles/elements/global.css";
+import BoardGame from "./src/object/BoardGame";
+import ScoreBoard from "./src/object/ScoreBoard";
 
 // document.querySelector('#app').innerHTML = `
 //   <h1>Hello Vite!</h1>
@@ -9,9 +9,11 @@ import ScoreBoard from './src/object/ScoreBoard';
 // `
 const $root = document.querySelector("#root");
 
-$root.insertAdjacentHTML("beforeend", 
-`
+$root.insertAdjacentHTML(
+  "beforeend",
+  `
 ${ScoreBoard()}
-${BoardGame(2)}
+${BoardGame(6)}
 
-`);
+`
+);

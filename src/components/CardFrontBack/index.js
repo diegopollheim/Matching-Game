@@ -6,9 +6,8 @@ function CardFrontBack() {
     const $origin = event.target;
     const $cardPai = $origin.closest(".card-front-back");
 
-    $cardPai.classList.toggle('active');
+    $cardPai.classList.toggle("active"); // Aplica e remove classe na tag 
 
-    console.log($cardPai);
   };
 
   return /*html*/ `
