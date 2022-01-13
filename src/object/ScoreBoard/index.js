@@ -4,10 +4,9 @@ import SetaPlacar from "../../components/SetaPlacar";
 
 import "./style.css";
 
-
 export default function ScoreBoard() {
   return /*html*/ `
-  ${SetaPlacar()}
+  ${SetaPlacar(1)}
     <header class="score-board">
         ${PlayerName("Player1")}
         ${Placar()}
