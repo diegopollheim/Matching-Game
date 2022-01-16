@@ -7,7 +7,6 @@
   column-gap: 1px;
   border: 2px solid #f25a70;
   box-sizing: border-box;
-  
 }
 
 .placar-row {
@@ -19,20 +18,28 @@
   border: 1px solid white;
 }
 
-.one {
+.placar-row > .pointer {
   width: 14px;
   height: 14px;
+  background-color: #828282;
+}
+
+/* PINTA O PRIMEIRO PONTO */
+.placar-row[data-points="1"] > .pointer:first-child {
   background-color: var(--color-mantis);
 }
 
-.two {
-  width: 14px;
-  height: 14px;
-  background-color: #828282;
+/* INVERTE A POSICAO DA ROW */
+.placar-row[data-points="2"] {
+  flex-direction: row-reverse;
 }
 
-.three {
-  width: 14px;
-  height: 14px;
-  background-color: #828282;
+/* PINTA DOIS PONTOS */
+.placar-row[data-points="2"] > .pointer:nth-child(n+2) {
+  background-color: var(--color-mantis);
+}
+
+/* PINTA OS 3 PONTOS */
+.placar-row[data-points="3"] > .pointer {
+  background-color: var(--color-mantis);
 }

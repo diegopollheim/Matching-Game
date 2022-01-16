@@ -1,7 +1,6 @@
 import "./src/styles/settings/colors.css";
 import "./src/styles/elements/global.css";
 import BoardGame from "./src/object/BoardGame";
-import ScoreBoard from "./src/object/ScoreBoard";
 
 // document.querySelector('#app').innerHTML = `
 //   <h1>Hello Vite!</h1>
@@ -12,7 +11,7 @@ const $root = document.querySelector("#root");
 $root.insertAdjacentHTML(
   "beforeend",
   `
-${ScoreBoard()}
+
 ${BoardGame(6)}
 
 `
