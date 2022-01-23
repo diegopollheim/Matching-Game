@@ -1,9 +1,9 @@
 import "./style.css"
 
-export default function CardGame (icon = "alura-pixel", alt = "Logo da alura" ) {
+export default function CardGame (icon = "https://raw.githubusercontent.com/diegopollheim/Matching-Game/master/images/alura-pixel.png", alt = "Logo da alura" ) {
     return /*html*/`
         <article class="card-game">
-            <img src="../images/${icon}.png" alt="${alt}">
+            <img src="${icon}" alt="${alt}">
         </article>
     `;
 }
