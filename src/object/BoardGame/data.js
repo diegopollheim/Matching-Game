@@ -1,27 +1,27 @@
 
 const cards = [
     {
-        icon: "html",
+        icon: "https://github.com/diegopollheim/Matching-Game/blob/master/images/html.png?raw=true",
         altIcon: "Logo do HTML"
     },
     {
-        icon: "html",
+        icon: "https://github.com/diegopollheim/Matching-Game/blob/master/images/html.png?raw=true",
         altIcon: "Logo do HTML"
     },
     {
-        icon: "css",
+        icon: "https://github.com/diegopollheim/Matching-Game/blob/master/images/css.png?raw=true",
         altIcon: "Logo do CSS"
     },
     {
-        icon: "css",
+        icon: "https://github.com/diegopollheim/Matching-Game/blob/master/images/css.png?raw=true",
         altIcon: "Logo do CSS"
     },
     {
-        icon: "javascript",
+        icon: "https://raw.githubusercontent.com/diegopollheim/Matching-Game/master/images/javascript.png",
         altIcon: "Logo do JavaScript"
     },
     {
-        icon: "javascript",
+        icon: "https://raw.githubusercontent.com/diegopollheim/Matching-Game/master/images/javascript.png",
         altIcon: "Logo do JavaScript"
     }
 ];
