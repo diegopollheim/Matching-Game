@@ -1,12 +1,16 @@
 import CardGame from "../CardGame";
 import "./style.css";
 
-function CardFrontBack(icon, altIcon) {
+function CardFrontBack(icon, altIcon, id) {
   window.handleClick = (event) => {
     const $origin = event.target;
     const $cardPai = $origin.closest(".card-front-back");
 
     $cardPai.classList.toggle("active"); // Aplica e remove classe na tag 
+    // $cardPai.classList.toggle("enable"); // Aplica e remove classe na tag 
+
+    $cardPai.setAttribute("id", "cardVirado")
+  
   };
 
   return /*html*/ `
