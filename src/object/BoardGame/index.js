@@ -1,36 +1,11 @@
 
 import CardFrontBack from "../../components/CardFrontBack";
 import "./style.css";
-// import cards from "./data.js";
+import cards from "./data.js";
 import ScoreBoard from "../ScoreBoard";
 
 export default function BoardGame() {
-  const cards = [
-    {
-        icon: "html",
-        altIcon: "Logo do HTML"
-    },
-    {
-        icon: "html",
-        altIcon: "Logo do HTML"
-    },
-    {
-        icon: "css",
-        altIcon: "Logo do CSS"
-    },
-    {
-        icon: "css",
-        altIcon: "Logo do CSS"
-    },
-    {
-        icon: "javascript",
-        altIcon: "Logo do JavaScript"
-    },
-    {
-        icon: "javascript",
-        altIcon: "Logo do JavaScript"
-    }
-];
+
   var ptsPlayer1 = 0;
   var ptsPlayer2 = 0;
 
