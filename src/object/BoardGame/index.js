@@ -31,7 +31,7 @@ export default function BoardGame(amountCards) {
       card2 = card2.children[0]
       card2 = card2.children[0]
       card2 = card2.getAttribute("alt")
-    
+   
       if (card1 === card2) {
         return true
       }
@@ -78,15 +78,24 @@ export default function BoardGame(amountCards) {
 
         ptsPlayer1++
         player1.setAttribute("data-points", ptsPlayer1)
+        if (ptsPlayer1 >= 2 && currentPlayer === "1") {
+          $setaPlayer.style.transform = "translateX(-42px)";
+        }
+        if (ptsPlayer1 >= 3 && currentPlayer === "1") {
+          $setaPlayer.style.transform = "translateX(-27px)";
+        }
+       
       }
 
       if (currentPlayer === "2") {
 
         ptsPlayer2++
         player2.setAttribute("data-points", ptsPlayer2)
-        if (ptsPlayer2 >= 2 && currentPlayer === "1") {
-
-          document.getElementById('seta').style.transform = "translateX(42px)";
+        if (ptsPlayer2 >= 2 && currentPlayer === "2") {
+          $setaPlayer.style.transform = "translateX(42px)";
+        }
+        if (ptsPlayer2 >= 3 && currentPlayer === "2") {
+          $setaPlayer.style.transform = "translateX(57px)";
         }
       }
     }   
@@ -108,14 +117,9 @@ export default function BoardGame(amountCards) {
 
         //REMOVE OS IDS PARA BUSCAR APENAS IDS "cardsVirados" na próxima jogada
         $cardsVirados[0].setAttribute("id", "")
-        $cardsVirados[1].setAttribute("id", "")
-        
-        card1 = ""
-        card2 = "="
+        $cardsVirados[1].setAttribute("id", "")        
 
-        // ALTERA A SETA ENTRE OS PLAYERS
       }, 500);
-
 
     }
   }
