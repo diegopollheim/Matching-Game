@@ -1,4 +1,6 @@
 
+
+
 .wrapper-winner {
   background-color: var(--color-arsenic);
   display: flex;
@@ -56,6 +58,5 @@
   background-color: var(--color-fiery-rose);
   margin-top: 10px;
   cursor: pointer;
-  ]
 }
 

@@ -2,10 +2,6 @@ import "./style.css"
 
 export default function Winner(props) {
 
-
-
-  
-
   return /*html*/ `
   <div class="wrapper-winner">
     <div class="card-winner">

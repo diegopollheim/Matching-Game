@@ -3,7 +3,8 @@ import CardFrontBack from "../../components/CardFrontBack";
 import "./style.css";
 import cards from "./data.js";
 import ScoreBoard from "../ScoreBoard";
-import Winner from "../Winner";
+import Winner from "../../components/Winner";
+
 
 
 export default function BoardGame() {
@@ -157,7 +158,6 @@ export default function BoardGame() {
   <section class="board-winner">
     ${0 == 0 && $winnerRestart}  
   </section>
-  
   
   `;
 }
