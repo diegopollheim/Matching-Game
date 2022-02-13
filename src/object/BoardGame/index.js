@@ -3,6 +3,8 @@ import CardFrontBack from "../../components/CardFrontBack";
 import "./style.css";
 import cards from "./data.js";
 import ScoreBoard from "../ScoreBoard";
+import Winner from "../Winner";
+
 
 export default function BoardGame() {
 
@@ -14,6 +16,11 @@ export default function BoardGame() {
   window.boardGame = {};
   window.boardGame.handleClick = () => {
     // cardsViradosArray = []
+
+
+    var teste = document.getElementsByClassName('board-winner');
+    teste[0].classList.add('vencedor');   
+    console.log(teste)
 
     let card1, card2
     function VerificaJogada() {
@@ -29,7 +36,7 @@ export default function BoardGame() {
       card2 = card2.children[0]
       card2 = card2.children[0]
       card2 = card2.getAttribute("alt")
-   
+
       if (card1 === card2) {
         return true
       }
@@ -41,7 +48,7 @@ export default function BoardGame() {
     var players = document.querySelectorAll('#pts-player');
     var player1 = players[0]
     var player2 = players[1]
-   
+
     // SORETEIA UM NUMARO ALEATORIO DE 0 - 5
     const numeroSorteado = Math.floor(Math.random() * cards.length);
 
@@ -82,7 +89,7 @@ export default function BoardGame() {
         if (ptsPlayer1 >= 3 && currentPlayer === "1") {
           $setaPlayer.style.transform = "translateX(-27px)";
         }
-       
+
       }
 
       if (currentPlayer === "2") {
@@ -96,16 +103,16 @@ export default function BoardGame() {
           $setaPlayer.style.transform = "translateX(57px)";
         }
       }
-    }   
+    }
 
     if ($cardsVirados.length === 2) {
       setTimeout(function () {
 
         // VERIFICA A JOGADA ATUAL
-   
+
         if (VerificaJogada()) {
           SomaPontos()
-          
+
         }
         else {
           // TROCA JOAGADOR E DESVIRA AS CARTAS
@@ -115,25 +122,29 @@ export default function BoardGame() {
 
         //REMOVE OS IDS PARA BUSCAR APENAS IDS "cardsVirados" na próxima jogada
         $cardsVirados[0].setAttribute("id", "")
-        $cardsVirados[1].setAttribute("id", "")        
+        $cardsVirados[1].setAttribute("id", "")
 
       }, 500);
 
     }
   }
 
-
-
-
+  const $winnerRestart = Winner('PLayer 1')
   const $htmlCards = cards.map((card) => CardFrontBack(card.icon, card.altIcon));
   const $htmlCardsList = $htmlCards.join("");
+
 
   return /*html*/ `
   ${ScoreBoard(ptsPlayer1, ptsPlayer2)}
   <section class="board-game" onClick="boardGame.handleClick()">
     <div class="board-game-content">
-      ${$htmlCardsList}
+      ${$htmlCardsList}   
     </div>
-  </section>  
+  </section>
+  <section class="board-winner">
+    ${0 == 0 && $winnerRestart}  
+  </section>
+  
+  
   `;
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200&family=Mulish:ital,wght@0,300;0,500;1,200;1,300&family=Press+Start+2P&display=swap');
 
-body {
+body,button {
     font-family: 'Press Start 2P', cursive;
     color: #EAE6DA;
     font-size: 10px;

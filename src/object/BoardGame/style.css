@@ -3,6 +3,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  /* display: none; */
 }
 
 .board-game-content {
@@ -12,3 +13,23 @@
   justify-content: space-evenly;
   perspective: 500px;
 }
+
+.board-winner {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -250px;
+  height: 100vh;
+  width: 100vw;
+  transition: all 2s;
+}
+
+.vencedor {
+  display: flex;
+  right: 0;
+  transition: all 2s;
+}
+
+/* .card-winner .vencedor {
+  transition: all 2s;
+} */
