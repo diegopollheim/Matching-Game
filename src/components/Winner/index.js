@@ -9,7 +9,7 @@ export default function Winner(props) {
      <h1>${props}</h1>
      <h2>Winner!!!</h2>
      <div class="trofeu">
-       <img src="/images/trofeu.png" />
+       <img src="https://raw.githubusercontent.com/diegopollheim/Matching-Game/master/images/trofeu.png" />
      </div>
      </div>
      <button onClick="window.location.reload()" >restart</button>

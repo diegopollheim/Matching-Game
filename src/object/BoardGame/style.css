@@ -1,6 +1,7 @@
 .board-game {
   display: flex;
   justify-content: center;
+ 
   width: 100%;
   height: 100%;
   /* display: none; */
@@ -15,17 +16,20 @@
 }
 
 .board-winner {
-  /* display: flex; */
+  right: -100vw;
+  visibility: collapse;
+  
   position: absolute;
   top: 0;
-  right: -100vw;
   height: 100vh;
   width: 100vw;
   transition: all 800ms;
+  /* transform: translateX(100vw); */
 }
 
 .vencedor {
-  /* display: flex; */
+
+  visibility: visible;
   right: 0;
 }
 

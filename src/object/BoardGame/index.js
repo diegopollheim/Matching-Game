@@ -5,8 +5,6 @@ import cards from "./data.js";
 import ScoreBoard from "../ScoreBoard";
 import Winner from "../../components/Winner";
 
-
-
 export default function BoardGame() {
 
   var ptsPlayer1 = 0;
@@ -16,10 +14,6 @@ export default function BoardGame() {
   //CONTEXTO PARA FUNCÃO
   window.boardGame = {};
   window.boardGame.handleClick = () => {
-    // cardsViradosArray = []
-
-
-
 
     let card1, card2
     function VerificaJogada() {
@@ -61,7 +55,6 @@ export default function BoardGame() {
       $cardsVirados.forEach((card) => card.classList.remove("active"));
     }
 
-
     // ELEMENTO DA SETA
     const $setaPlayer = document.querySelector(".seta-point");
 
@@ -102,8 +95,6 @@ export default function BoardGame() {
           $setaPlayer.style.transform = "translateX(57px)";
         }
       }
-
-
     }
 
     if ($cardsVirados.length === 2) {
@@ -126,7 +117,6 @@ export default function BoardGame() {
         $cardsVirados[1].setAttribute("id", "")
 
       }, 500);
-
     }
 
     // Qtd de acertos
@@ -138,10 +128,9 @@ export default function BoardGame() {
         var boardVencedor = document.getElementsByClassName('board-winner');
         boardVencedor[0].classList.add('vencedor');
 
-      }, 800);
+      }, 600);
     };
   }
-
 
   const $winnerRestart = Winner(ptsPlayer1 > ptsPlayer2 ? "Player 1" : "Player 2")
   const $htmlCards = cards.map((card) => CardFrontBack(card.icon, card.altIcon));
@@ -154,10 +143,10 @@ export default function BoardGame() {
     <div class="board-game-content">
       ${$htmlCardsList}   
     </div>
-  </section>
+    </section>
+
   <section class="board-winner">
     ${0 == 0 && $winnerRestart}  
-  </section>
-  
+  </section>  
   `;
 }
