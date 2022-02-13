@@ -135,7 +135,8 @@ export default function BoardGame() {
   const $winnerRestart = Winner(ptsPlayer1 > ptsPlayer2 ? "Player 1" : "Player 2")
   const $htmlCards = cards.map((card) => CardFrontBack(card.icon, card.altIcon));
   const $htmlCardsList = $htmlCards.join("");
-
+document.documentElement.style.overflow = 'hidden';
+document.body.scrool = "no;"
 
   return /*html*/ `
   ${ScoreBoard(ptsPlayer1, ptsPlayer2)}
