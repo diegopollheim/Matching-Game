@@ -18,9 +18,7 @@ export default function BoardGame() {
     // cardsViradosArray = []
 
 
-    var teste = document.getElementsByClassName('board-winner');
-    teste[0].classList.add('vencedor');   
-    console.log(teste)
+
 
     let card1, card2
     function VerificaJogada() {
@@ -103,6 +101,8 @@ export default function BoardGame() {
           $setaPlayer.style.transform = "translateX(57px)";
         }
       }
+
+
     }
 
     if ($cardsVirados.length === 2) {
@@ -127,9 +127,22 @@ export default function BoardGame() {
       }, 500);
 
     }
+
+    // Qtd de acertos
+    var jogadas = document.querySelectorAll('.active')
+
+    // Se o numero de cards ativos for igual a 6 existe um vencedor e encerra a partida
+    if (jogadas.length == 6) {
+      setTimeout(() => {
+        var boardVencedor = document.getElementsByClassName('board-winner');
+        boardVencedor[0].classList.add('vencedor');
+
+      }, 800);
+    };
   }
 
-  const $winnerRestart = Winner('PLayer 1')
+
+  const $winnerRestart = Winner(ptsPlayer1 > ptsPlayer2 ? "Player 1" : "Player 2")
   const $htmlCards = cards.map((card) => CardFrontBack(card.icon, card.altIcon));
   const $htmlCardsList = $htmlCards.join("");
 

@@ -16,7 +16,7 @@ export default function Winner(props) {
        <img src="/images/trofeu.png" />
      </div>
      </div>
-     <button>restart</button>
+     <button onClick="window.location.reload()" >restart</button>
     </div>
   </div>`;
 }

@@ -15,19 +15,18 @@
 }
 
 .board-winner {
-  display: none;
+  /* display: flex; */
   position: absolute;
   top: 0;
-  right: -250px;
+  right: -100vw;
   height: 100vh;
   width: 100vw;
-  transition: all 2s;
+  transition: all 800ms;
 }
 
 .vencedor {
-  display: flex;
+  /* display: flex; */
   right: 0;
-  transition: all 2s;
 }
 
 /* .card-winner .vencedor {
