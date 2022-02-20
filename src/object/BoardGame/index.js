@@ -7,6 +7,24 @@ import Winner from "../../components/Winner";
 
 export default function BoardGame() {
 
+
+  // Funcao que embaralha as cartas
+  function randonSort(oldCards) {
+        var newCards = []
+    while (newCards.length !== oldCards.length) {
+      var i = Math.floor(Math.random() * oldCards.length)
+     
+      if (newCards.indexOf(oldCards[i]) < 0){
+        newCards.push(oldCards[i])
+      }
+    }
+    return newCards
+    
+  }
+
+  // Cartas embaralahadas
+  const cartas = randonSort(cards)
+
   var ptsPlayer1 = 0;
   var ptsPlayer2 = 0;
 
@@ -116,7 +134,7 @@ export default function BoardGame() {
         $cardsVirados[0].setAttribute("id", "")
         $cardsVirados[1].setAttribute("id", "")
 
-      }, 500);
+      }, 450);
     }
 
     // Qtd de acertos
@@ -132,11 +150,13 @@ export default function BoardGame() {
     };
   }
 
-  const $winnerRestart = Winner(ptsPlayer1 > ptsPlayer2 ? "Player 1" : "Player 2")
-  const $htmlCards = cards.map((card) => CardFrontBack(card.icon, card.altIcon));
+  const $winnerRestart = Winner(ptsPlayer1 > ptsPlayer2 ? "Player 1" : "Player 2")  
+  const $htmlCards = cartas.map((card) => CardFrontBack(card.icon, card.altIcon));
+ 
+ 
   const $htmlCardsList = $htmlCards.join("");
-document.documentElement.style.overflow = 'hidden';
-document.body.scrool = "no;"
+  document.documentElement.style.overflow = 'hidden';
+  document.body.scrool = "no;"
 
   return /*html*/ `
   ${ScoreBoard(ptsPlayer1, ptsPlayer2)}
